@@ -14,7 +14,7 @@ import restaurant from '../../public/assets/projects/restaurant.png'
 import bank from '../../public/assets/projects/bank.png'
 import metaverse from '../../public/assets/projects/metaverse.png'
 
-function projectDetails() {
+function ProjectDetails() {
   const router = useRouter();
   const projectId = router.query.project;
 
@@ -155,4 +155,4 @@ function projectDetails() {
   )
 }
 
-export default projectDetails;
+export default ProjectDetails;
