@@ -112,16 +112,16 @@ function projectDetails() {
   ]
   const reqProject = new Object(projects.find(item => projectId == item.id));
   return (
-    <div key={reqProject.id} className='w-full'>
-      <div className="w-screen h-[30vh] lg:h-[40vh] relative">
+    <div className='w-full'>
+      <div className="relative w-screen h-[30vh] lg:h-[40vh]">
         <div className="absolute top-0 left-0 w-full h-[30vh] lg:h-[40vh] bg-black/60 z-10" />
-        <Image className='absolute z-1' layout='fill' objectFit='cover' src={reqProject.src} alt="/" />
+        <Image className='absolute z-1' fill object-fit='cover' src={reqProject.src} alt={`${reqProject.title}-Img`} />
         <div className='absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2'>
           <h2 className='py-2'>{reqProject.title}</h2>
-          <h3 className='flex ' >{reqProject.techUsed.map((tech) => (
-            <span className='text-gray-400 py-2 px-2 flex items-center font-semibold'>
+          <h3 className='flex ' >{reqProject.techUsed.map((tech, i) => (
+            <p key={`techname${i}`} className='text-gray-400 py-2 px-2 flex items-center font-semibold'>
               {tech}
-            </span>
+            </p>
           ))}</h3>
         </div>
       </div>
@@ -138,8 +138,8 @@ function projectDetails() {
             <p className='text-center font-bold pb-2'>Technologies</p>
             <div className='grid grid-cols-2 md:grid-cols-1'>
 
-              {reqProject.techUsed.map((tech) => (
-                <p className='text-gray-600 py-2 flex items-center'>
+              {reqProject.techUsed.map((tech, i) => (
+                <p key={`tech${i}`} className='text-gray-600 py-2 flex items-center overflow-auto'>
                   <RiRadioButtonFill className='pr-1' /> {tech}
                 </p>
               ))}

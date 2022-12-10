@@ -4,7 +4,7 @@ import Contact from '../components/Contact'
 import Main from '../components/Main'
 import Projects from '../components/projects/Projects'
 import Skills from '../components/Skills'
-import Navbar from '../components/Navbar';
+import Navbar from '../components/Navbar'
 
 export default function Home() {
   return (

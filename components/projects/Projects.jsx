@@ -9,10 +9,11 @@ import weatherApp from '../../public/assets/projects/weatherApp.png'
 import restaurant from '../../public/assets/projects/restaurant.png'
 import bank from '../../public/assets/projects/bank.png'
 import metaverse from '../../public/assets/projects/metaverse.png'
-import ProjectItem from '../projects/ProjectItem'
+import Image from 'next/image'
+import Link from 'next/link'
 
-const Projects = () => {
-  const projects = [
+function Projects() {
+  const projectsList = [
     {
       id: 1,
       src: nuuk,
@@ -80,15 +81,29 @@ const Projects = () => {
         <p className='text-xl tracking-widest uppercase text-[#5651e5]'>Projects</p>
         <h2 className="py-4">What I've Built</h2>
         <div className="grid md:grid-cols-2 gap-8">
-          {projects.reverse().map(({ id, src, title, techUsed }) => {
+
+          {projectsList.reverse().map((project, i) => {
             return (
-              <ProjectItem title={title} bgImg={src} id={id} techUsed={techUsed} />
+              <Link key={`link${i}`} href={`/project/${project.id}`} >
+              <div className="relative flex flex-col items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl p-4 group hover:bg-gradient-to-r from-[#5651e5] to-[#709dff]">
+                  <Image className='rounded-xl group-hover:opacity-10' src={project.src} alt={`${project.title}-img`} priority/>
+                  <div className="hidden lg:group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] ">
+                    <h3 className="text-2xl text-white tracking-widest text-center">{project.title}</h3>
+                    <p className="pb-4 pt-2 text-white text-center opacity-75">{project.techUsed}</p>
+                    <p className="text-center py-3 rounded-lg bg-white text-gray-700 font-bold text-lg cursor-pointer">More Info</p>
+                  </div>
+                  <div className="lg:hidden flex text-center items-center justify-center">
+                    <p className='text-bold pt-4'>{project.title}</p>
+                  </div>
+              </div>
+              </Link>
             )
           })}
+
         </div>
       </div>
     </div>
   )
-}
+};
 
-export default Projects
+export default Projects;
