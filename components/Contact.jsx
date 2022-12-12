@@ -12,7 +12,7 @@ const Contact = () => {
                 <p className="text-xl tracking-widest uppercase text-[#5651e5]">Contact</p>
                 <h2 className="py-4">Get In Touch</h2>
                 <div className="grid lg:grid-cols-5 gap-8">
-                    <div className="col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4">
+                    <div className="col-span-3 lg:col-span-2 w-full h-full shadow-md shadow-gray-400 rounded-xl p-4">
                         <div className="lg:p-4 h-full">
                             <div>
                                 <Image className='rounded-xl hover:scale-105 ease-in duration-300' src={contactImg} alt="/" />
@@ -31,7 +31,7 @@ const Contact = () => {
                         </div>
                     </div>
 
-                    <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4">
+                    <div className="col-span-3 w-full h-auto shadow-md shadow-gray-400 rounded-xl lg:p-4">
                         <div className='p-4'>
                             <form action='https://getform.io/f/89ec7810-eb6a-4d95-917b-2d7d87a0eb8f' method="POST">
                                 <div className="grid md:grid-cols-2 gap-4 w-full py-2">

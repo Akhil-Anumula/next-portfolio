@@ -45,7 +45,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div className={shadow ? 'fixed w-full h-20 bg-[#ecf0f3] shadow-xl z-[100]' : 'fixed w-full h-20 bg-[#ecf0f3] z-[100]'}>
+        <div className={shadow ? 'fixed w-full h-20 bg-gradient-to-l from-black to-gray-800 text-white shadow-xl z-[100]' : 'fixed w-full h-20 bg-gradient-to-l from-black to-gray-800 text-white z-[100]'}>
             <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
                 <div>
                     <Link to='Home'>
@@ -53,7 +53,7 @@ const Navbar = () => {
                     </Link>
                 </div>
                 <div>
-                    <ul className='hidden md:flex text-[#1f2937]'>
+                    <ul className='hidden md:flex text-white opacity-75'>
 
                         {links.map(({ id, link }) => {
                             return (<li key={id} className='ml-10 text-sm uppercase hover:text-blue-500'><Link to={link} smooth={true} duration={800}>{link}</Link></li>)
@@ -65,12 +65,12 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-            <div className={nav ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70 duration-300 ease-in" : ""}>
-                <div className={nav ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-700" : "fixed left-[-100%] top-0 p-10 ease-in duration-500"}>
+            <div className={nav ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black duration-300 ease-in" : ""}>
+                <div className={nav ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:[45%] h-screen bg-gray-900 p-10 ease-in duration-700" : "fixed left-[-100%] top-0 p-10 ease-in duration-500"}>
                     <div>
                         <div className="flex w-full items-center justify-between">
                             <div>
-                                <h1 className='text-5xl font-signature ml-2 tracking-wide opacity-90'>Akhil</h1>
+                                <h1 className='text-5xl font-signature ml-2 tracking-wide opacity-75 font-normal'>Akhil</h1>
                             </div>
                             <div onClick={handleNav} className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer'>
                                 <AiOutlineClose />
@@ -81,7 +81,7 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div className='py-4 flex flex-col'>
-                        <ul className='uppercase'>
+                        <ul className='uppercase text-white opacity-75'>
 
                             {links.map(({ id, link }) => {
                                 return (<li key={id} className='py-4 text-sm'><Link onClick={() => setNav(false)} to={link} smooth={true}>{link}</Link></li>)

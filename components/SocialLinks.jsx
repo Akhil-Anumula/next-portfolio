@@ -45,7 +45,7 @@ const SocialLinks = () => {
         <>
             {links.map(({ id, child, href, download }) => (
                 <a href={href} download={download} target='_blank' rel='noreferrer' key={`a${id}`} >
-                    <div key={id} className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-125 ease-in duration-300'>
+                    <div key={id} className='bg-neutral-900  rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-125 ease-in duration-300'>
                         {child}
                     </div>
                 </a>
