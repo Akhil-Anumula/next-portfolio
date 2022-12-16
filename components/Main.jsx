@@ -3,11 +3,11 @@ import SocialLinks from './SocialLinks'
 
 const Main = () => {
     return (
-        <div name="home" className='h-screen w-full text-center '>
+        <div id="Home" className='h-screen w-full text-center bg-gradient-to-b from-black via-black to-gray-800'>
             <div className='max-w-[1240px] mx-auto flex items-center justify-center w-full h-full p-2'>
                 <div>
                     <p className="uppercase text-sm tracking-widest opacity-70">Let's build something together</p>
-                    <h1 className='py-4'>Hi, I'm <span className='text-[#5651e5]'>Akhil</span></h1>
+                    <h1 className='py-4'>Hi, I'm <span className='text-[#0e08b3]'>Akhil</span></h1>
                     <h1 className='py-2'>
                         A Full-Stack Web Developer
                     </h1>

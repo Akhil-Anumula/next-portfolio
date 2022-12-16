@@ -4,6 +4,7 @@ import ticTacToe from '../../public/assets/projects/ticTacToe.png'
 import shoplane from '../../public/assets/projects/shoplane.png'
 import ipl from '../../public/assets/projects/ipl.png'
 import movies from '../../public/assets/projects/movies.png'
+import digitalStore from '../../public/assets/projects/digitalStore.png'
 import todo from '../../public/assets/projects/todo.png'
 import weatherApp from '../../public/assets/projects/weatherApp.png'
 import restaurant from '../../public/assets/projects/restaurant.png'
@@ -46,46 +47,52 @@ function Projects() {
     },
     {
       id: 6,
+      src: digitalStore,
+      title: "Digital Store",
+      techUsed: "React and Tailwind CSS"
+    },
+    {
+      id: 7,
       src: todo,
       title: "Todo App",
       techUsed: "React, Firebase and Tailwind CSS"
     },
     {
-      id: 7,
+      id: 8,
       src: weatherApp,
       title: "Weather App",
       techUsed: "NextJs, OpenWeatherMap API and Tailwind CSS"
     },
     {
-      id: 8,
+      id: 9,
       src: restaurant,
       title: "Restaurant Website",
       techUsed: "React, React-Scroll"
     },
     {
-      id: 9,
+      id: 10,
       src: bank,
       title: "Banking Website",
       techUsed: "React and Tailwind CSS"
     },
     {
-      id: 10,
+      id: 11,
       src: metaverse,
       title: "Metaverse Website",
       techUsed: "NextJs, Framer Motions and Tailwind CSS"
     }
   ]
   return (
-    <div name="Projects" className='w-full' id='Projects'>
+    <div className='w-full p-4 bg-gradient-to-b from-gray-800 to-black ' id='Projects'>
       <div className="max-w-[1240px] mx-auto px-2 py-16">
-        <p className='text-xl tracking-widest uppercase text-[#5651e5]'>Projects</p>
+        <p className='text-xl tracking-widest uppercase text-[#1c15e7]'>Projects</p>
         <h2 className="py-4">What I've Built</h2>
         <div className="grid md:grid-cols-2 gap-8">
 
           {projectsList.reverse().map((project, i) => {
             return (
               <Link key={`link${i}`} href={`/project/${project.id}`} >
-              <div className="relative flex flex-col items-center justify-center h-auto w-full shadow-md shadow-gray-400 rounded-xl p-4 group hover:bg-gradient-to-r from-[#5651e5] to-[#709dff]">
+              <div className="relative flex flex-col items-center justify-center h-auto w-full shadow-lg shadow-gray-600 rounded-xl p-4 group hover:bg-gradient-to-r from-[#5651e5] to-[#709dff]">
                   <Image className='rounded-xl group-hover:opacity-10' src={project.src} alt={`${project.title}-img`} priority/>
                   <div className="hidden lg:group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] ">
                     <h3 className="text-2xl text-white tracking-widest text-center">{project.title}</h3>

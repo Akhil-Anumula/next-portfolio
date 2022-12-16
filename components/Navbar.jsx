@@ -45,11 +45,11 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div className={shadow ? 'fixed w-full h-20 bg-gradient-to-l from-black to-gray-800 text-white shadow-xl z-[100]' : 'fixed w-full h-20 bg-gradient-to-l from-black to-gray-800 text-white z-[100]'}>
+        <div className={shadow ? 'fixed w-full h-20 bg-gradient-to-b from-black to-gray-900 text-white shadow-xl z-[100]' : 'fixed w-full h-20 bg-transparent text-white z-[100]'}>
             <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
                 <div>
                     <Link to='Home'>
-                        <h1 className='text-5xl font-signature ml-2 tracking-wide opacity-90 cursor-pointer'>Akhil</h1>
+                        <h1 className='text-5xl font-signature ml-2 text-blue-700 tracking-wide cursor-pointer'>Akhil</h1>
                     </Link>
                 </div>
                 <div>
@@ -65,12 +65,12 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-            <div className={nav ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black duration-300 ease-in" : ""}>
+            <div onClick={handleNav} className={nav ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black duration-300 ease-in" : ""}>
                 <div className={nav ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:[45%] h-screen bg-gray-900 p-10 ease-in duration-700" : "fixed left-[-100%] top-0 p-10 ease-in duration-500"}>
                     <div>
                         <div className="flex w-full items-center justify-between">
                             <div>
-                                <h1 className='text-5xl font-signature ml-2 tracking-wide opacity-75 font-normal'>Akhil</h1>
+                                <h1 className='text-5xl font-signature ml-2 tracking-wide text-blue-700 opacity-75 font-bold'>Akhil</h1>
                             </div>
                             <div onClick={handleNav} className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer'>
                                 <AiOutlineClose />
@@ -88,8 +88,8 @@ const Navbar = () => {
                             })}
                         </ul>
                         <div className='pt-20'>
-                            <p className='uppercase tracking-widest text-[#5651e5]'>Let's Connect</p>
-                            <div className='flex items-center justify-between my-8 w-full sm:w-[80%]'>
+                            <p className='uppercase font-extrabold tracking-widest text-blue-700 '>Let's Connect</p>
+                            <div className='flex items-center justify-evenly my-8 w-full'>
                                 <SocialLinks />
                             </div>
                         </div>

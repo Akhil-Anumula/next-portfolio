@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily:{
-      signature : ['Playball']
+      signature : ['Allura']
     }
   },
   plugins: [],

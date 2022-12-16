@@ -7,12 +7,12 @@ import SocialLinks from './SocialLinks';
 
 const Contact = () => {
     return (
-        <div name="Contact" className='w-full lg:h-screen'>
+        <div id="Contact" className='w-full bg-gradient-to-b from-black via-black to-gray-800'>
             <div className="max-w-[1240px] m-auto px-2 py-16 w-full">
-                <p className="text-xl tracking-widest uppercase text-[#5651e5]">Contact</p>
+                <p className="text-xl tracking-widest uppercase text-[#1c15e7]">Contact</p>
                 <h2 className="py-4">Get In Touch</h2>
                 <div className="grid lg:grid-cols-5 gap-8">
-                    <div className="col-span-3 lg:col-span-2 w-full h-full shadow-md shadow-gray-400 rounded-xl p-4">
+                    <div className="col-span-3 lg:col-span-2 w-full h-full shadow-lg shadow-gray-600 rounded-xl p-4">
                         <div className="lg:p-4 h-full">
                             <div>
                                 <Image className='rounded-xl hover:scale-105 ease-in duration-300' src={contactImg} alt="/" />
@@ -31,30 +31,30 @@ const Contact = () => {
                         </div>
                     </div>
 
-                    <div className="col-span-3 w-full h-auto shadow-md shadow-gray-400 rounded-xl lg:p-4">
+                    <div className="col-span-3 w-full h-auto shadow-lg shadow-gray-600 rounded-xl lg:p-4">
                         <div className='p-4'>
                             <form action='https://getform.io/f/89ec7810-eb6a-4d95-917b-2d7d87a0eb8f' method="POST">
                                 <div className="grid md:grid-cols-2 gap-4 w-full py-2">
                                     <div className="flex flex-col">
                                         <label className='uppercase text-sm font-bold py-2 px-2'>Name</label>
-                                        <input type="text" name='name' className='border-2 rounded-lg p-3 flex border-gray-300' />
+                                        <input type="text" name='name' className='border-2 bg-transparent focus:outline-none rounded-lg p-3 flex border-gray-300' />
                                     </div>
                                     <div className="flex flex-col">
                                         <label className='uppercase text-sm font-bold py-2 px-2'>Phone Number</label>
-                                        <input type="text" name='number' className='border-2 rounded-lg p-3 flex border-gray-300' />
+                                        <input type="text" name='number' className='border-2 bg-transparent focus:outline-none rounded-lg p-3 flex border-gray-300' />
                                     </div>
                                 </div>
                                 <div className='flex flex-col py-2'>
                                     <label className='uppercase text-sm font-bold py-2 px-2'>Email</label>
-                                    <input type="email" name='email' className='border-2 rounded-lg p-3 flex border-gray-300' />
+                                    <input type="email" name='email' className='border-2 bg-transparent focus:outline-none rounded-lg p-3 flex border-gray-300' />
                                 </div>
                                 <div className='flex flex-col py-2'>
                                     <label className='uppercase text-sm font-bold py-2 px-2'>Subject</label>
-                                    <input type="text" name='subject' className='border-2 rounded-lg p-3 flex border-gray-300' />
+                                    <input type="text" name='subject' className='border-2 bg-transparent focus:outline-none rounded-lg p-3 flex border-gray-300' />
                                 </div>
                                 <div className='flex flex-col py-2'>
                                     <label className='uppercase text-sm font-bold py-2 px-2'>Message</label>
-                                    <textarea name='message' className='border-2 rounded-lg p-3 border-gray-300' rows={8} ></textarea>
+                                    <textarea name='message' className='border-2 bg-transparent focus:outline-none rounded-lg p-3 border-gray-300' rows={8} ></textarea>
                                 </div>
                                 <button className='w-full p-4 text-gray-100 mt-4 font-bold'>Submit</button>
                             </form>

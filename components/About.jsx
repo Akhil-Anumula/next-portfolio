@@ -5,10 +5,10 @@ import profile from "../static/profile.jpg"
 
 const About = () => {
     return (
-        <div name='About' className='w-full md:h-screen p-2 flex items-center py-16'>
+        <div id='About' className='w-full md:h-screen p-4 flex items-center py-16 bg-gradient-to-b from-gray-800 to-black '>
         <div className='max-w-[1240px] m-auto md:grid grid-cols-3 gap-8'>
                 <div className='col-span-2'>
-                    <p className='uppercase text-xl tracking-widest text-[#5651e5]'>About</p>
+                    <p className='uppercase text-xl tracking-widest text-[#1c15e7]'>About</p>
                     <h2 className='py-4'>Who I Am</h2>
                     <p className='py-2 text-white opacity-40'>
                         # I am not your normal developer

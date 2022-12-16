@@ -1,10 +1,10 @@
 import Head from 'next/head'
+import Navbar from '../components/Navbar'
 import About from '../components/About'
 import Contact from '../components/Contact'
 import Main from '../components/Main'
 import Projects from '../components/projects/Projects'
 import Skills from '../components/Skills'
-import Navbar from '../components/Navbar'
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest"></link>
       </Head>
-      <Navbar />
+      <Navbar/>
       <Main />
       <About />
       <Skills />

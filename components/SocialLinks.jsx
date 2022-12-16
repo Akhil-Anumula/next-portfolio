@@ -9,7 +9,7 @@ const SocialLinks = () => {
             id: 1,
             child: (
                 <>
-                    <FaLinkedinIn />
+                    <FaLinkedinIn size={20}/>
                 </>),
             href: 'https://www.linkedin.com/in/akhil-anumula/',
         },
@@ -17,7 +17,7 @@ const SocialLinks = () => {
             id: 2,
             child: (
                 <>
-                    <FaGithub />
+                    <FaGithub size={20}/>
                 </>),
             href: 'https://github.com/Akhil-Anumula'
 
@@ -26,7 +26,7 @@ const SocialLinks = () => {
             id: 3,
             child: (
                 <>
-                    <AiOutlineMail />
+                    <AiOutlineMail size={20}/>
                 </>),
             href: 'mailto:akhil.anumula23@gmail.com'
 
@@ -35,7 +35,7 @@ const SocialLinks = () => {
             id: 4,
             child: (
                 <>
-                    <BsFillPersonLinesFill />
+                    <BsFillPersonLinesFill size={20}/>
                 </>),
             href: '/assets/AKHIL_ANUMULA_Resume.pdf',
             download: true
@@ -45,7 +45,7 @@ const SocialLinks = () => {
         <>
             {links.map(({ id, child, href, download }) => (
                 <a href={href} download={download} target='_blank' rel='noreferrer' key={`a${id}`} >
-                    <div key={id} className='bg-neutral-900  rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-125 ease-in duration-300'>
+                    <div key={id} className='bg-neutral-900 m-2 rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-125 ease-in duration-300'>
                         {child}
                     </div>
                 </a>
