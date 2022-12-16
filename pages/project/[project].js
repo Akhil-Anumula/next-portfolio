@@ -124,7 +124,7 @@ function ProjectDetails() {
   const reqProject = new Object(projects.find(item => projectId == item.id));
   return (
     <>
-      {Object.keys(reqProject)?.length && (<div className='w-full bg-gradient-to-b from-black via-black to-gray-800'>
+      {Object.keys(reqProject)?.length && (<div className='w-full h-screen bg-gradient-to-b from-black via-black to-gray-800'>
         <div className="relative w-screen h-[30vh] lg:h-[40vh]">
           <div className="absolute top-0 left-0 w-full h-[30vh] lg:h-[40vh] bg-black/60 z-10" />
           <Image className='absolute z-1' fill object-fit='cover' src={reqProject.src} alt={`${reqProject.title}-Img`} priority={true} />
@@ -147,7 +147,7 @@ function ProjectDetails() {
             <a href={reqProject.demo} target="_blank" rel="noreferrer"><button className='px-8 py-2 mt-4 mr-8'>Demo</button></a>
             <a href={reqProject.code} target="_blank" rel="noreferrer"><button className='px-8 py-2 mt-4'>Code</button></a>
           </div>
-          <div className='col-span-4 md:col-span-1 shadow-md shadow-gray-400 rounded-xl p-4'>
+          <div className='col-span-4 md:col-span-1 shadow-lg shadow-gray-600 rounded-xl p-4'>
             <div className="p-2">
               <p className='text-center font-bold pb-2'>Technologies</p>
               <div className='grid grid-cols-2 md:grid-cols-1'>
