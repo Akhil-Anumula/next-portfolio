@@ -75,7 +75,7 @@ function Skills() {
     return (
         <div id='Skills' className='w-full lg:h-screen p-4 bg-gradient-to-b from-black via-black to-gray-800'>
             <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
-                <p className='text-xl tracking-widest uppercase text-[#1c15e7]'>Skills</p>
+                <p className='text-xl tracking-widest uppercase text-blue-600'>Skills</p>
                 <h2 className='py-4'>What I can do</h2>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 

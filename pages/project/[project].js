@@ -124,7 +124,7 @@ function ProjectDetails() {
   const reqProject = new Object(projects.find(item => projectId == item.id));
   return (
     <>
-      {Object.keys(reqProject)?.length && (<div className='w-full h-screen bg-gradient-to-b from-black via-black to-gray-800'>
+      {Object.keys(reqProject)?.length && (<div className='w-full bg-gradient-to-b from-black via-black to-gray-800'>
         <div className="relative w-screen h-[30vh] lg:h-[40vh]">
           <div className="absolute top-0 left-0 w-full h-[30vh] lg:h-[40vh] bg-black/60 z-10" />
           <Image className='absolute z-1' fill object-fit='cover' src={reqProject.src} alt={`${reqProject.title}-Img`} priority={true} />

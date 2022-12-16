@@ -9,7 +9,7 @@ const Contact = () => {
     return (
         <div id="Contact" className='w-full bg-gradient-to-b from-black via-black to-gray-800'>
             <div className="max-w-[1240px] m-auto px-2 py-16 w-full">
-                <p className="text-xl tracking-widest uppercase text-[#1c15e7]">Contact</p>
+                <p className="text-xl tracking-widest uppercase text-blue-600">Contact</p>
                 <h2 className="py-4">Get In Touch</h2>
                 <div className="grid lg:grid-cols-5 gap-8">
                     <div className="col-span-3 lg:col-span-2 w-full h-full shadow-lg shadow-gray-600 rounded-xl p-4">

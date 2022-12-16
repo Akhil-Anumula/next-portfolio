@@ -29,7 +29,7 @@ body{
     @apply cursor-pointer
   }
   button{
-    @apply shadow-md shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#0e08ad] to-[#05173d] text-white
+    @apply shadow-lg shadow-gray-600 rounded-xl uppercase bg-gradient-to-r from-[#0e08ad] to-[#05173d] text-white
   }
   li{
     @apply font-bold
