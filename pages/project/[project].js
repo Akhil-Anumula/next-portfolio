@@ -126,7 +126,7 @@ function ProjectDetails() {
   return (
     <>
       {Object.keys(reqProject)?.length && (
-        <div className='w-full h-full md:h-screen bg-gradient-to-b from-black via-black to-gray-800'>
+        <div className='w-full h-full md:h-screen bg-black'>
           <div className="relative w-screen h-[30vh] lg:h-[40vh]">
             <div className="absolute top-0 left-0 w-full h-[30vh] lg:h-[40vh] bg-black/60 z-10" />
             <Link href="/#Projects">
