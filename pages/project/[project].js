@@ -14,6 +14,7 @@ import weatherApp from '../../public/assets/projects/weatherApp.png'
 import restaurant from '../../public/assets/projects/restaurant.png'
 import bank from '../../public/assets/projects/bank.png'
 import metaverse from '../../public/assets/projects/metaverse.png'
+import { TbArrowBigLeft } from 'react-icons/tb'
 
 
 function ProjectDetails() {
@@ -70,7 +71,7 @@ function ProjectDetails() {
       id: 6,
       src: digitalStore,
       title: "Digital Store",
-      techUsed: ["React","React-Router-Dom","Tailwind CSS"],
+      techUsed: ["React", "React-Router-Dom", "Tailwind CSS"],
       description: "Implemented a sample store app which uses dummyjson API to fetch different products data. It is designed with Tailwind CSS and made with React. It uses React-Router-Dom and Hash-Links to traverse between different routes.",
       demo: "https://digital-store3.netlify.app/",
       code: "https://github.com/Akhil-Anumula/sample-store"
@@ -124,48 +125,54 @@ function ProjectDetails() {
   const reqProject = new Object(projects.find(item => projectId == item.id));
   return (
     <>
-      {Object.keys(reqProject)?.length && (<div className='w-full h-screen bg-gradient-to-b from-black via-black to-gray-800'>
-        <div className="relative w-screen h-[30vh] lg:h-[40vh]">
-          <div className="absolute top-0 left-0 w-full h-[30vh] lg:h-[40vh] bg-black/60 z-10" />
-          <Image className='absolute z-1' fill object-fit='cover' src={reqProject.src} alt={`${reqProject.title}-Img`} priority={true} />
-          <div className='absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2'>
-            <h2 className='py-2'>{reqProject.title}</h2>
-            <h3 className='flex ' >
-              {reqProject.techUsed.map((tech, i) => (
-                <p key={`techname${i}`} className='text-gray-400 py-2 px-2 flex items-center font-semibold'>
-                  {tech}
-                </p>
-              ))}
-            </h3>
-          </div>
-        </div>
-        <div className="max-w-[1240px] mx-auto p-4 grid md:grid-cols-5 gap-8 pt-8">
-          <div className="col-span-4 ">
-            <p>Project</p>
-            <h2>Overview</h2>
-            <p className='pt-4'>{reqProject.description}</p>
-            <a href={reqProject.demo} target="_blank" rel="noreferrer"><button className='px-8 py-2 mt-4 mr-8'>Demo</button></a>
-            <a href={reqProject.code} target="_blank" rel="noreferrer"><button className='px-8 py-2 mt-4'>Code</button></a>
-          </div>
-          <div className='col-span-4 md:col-span-1 shadow-lg shadow-gray-600 rounded-xl p-4'>
-            <div className="p-2">
-              <p className='text-center font-bold pb-2'>Technologies</p>
-              <div className='grid grid-cols-2 md:grid-cols-1'>
-
+      {Object.keys(reqProject)?.length && (
+        <div className='w-full h-full md:h-screen bg-gradient-to-b from-black via-black to-gray-800'>
+          <div className="relative w-screen h-[30vh] lg:h-[40vh]">
+            <div className="absolute top-0 left-0 w-full h-[30vh] lg:h-[40vh] bg-black/60 z-10" />
+            <Link href="/#Projects">
+              <p className='md:hidden text-white z-20 absolute top-0 left-0'><TbArrowBigLeft size={30} /></p>
+            </Link>
+            <Image className='absolute z-1' fill object-fit='cover' src={reqProject.src} alt={`${reqProject.title}-Img`} priority={true} />
+            <div className='absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2'>
+              <h2 className='py-2'>{reqProject.title}</h2>
+              <h3 className='flex ' >
                 {reqProject.techUsed.map((tech, i) => (
-                  <p key={`tech${i}`} className='text-white opacity-60 py-2 flex items-center overflow-auto'>
-                    <RiRadioButtonFill className='pr-1' /> {tech}
+                  <p key={`techname${i}`} className='text-gray-400 py-2 px-2 flex items-center font-semibold'>
+                    {tech}
                   </p>
                 ))}
-
-              </div>
+              </h3>
             </div>
           </div>
-          <Link href="/#Projects">
-            <p className='underline cursor-pointer'>Back</p>
-          </Link>
+          <div className="max-w-[1240px] mx-auto p-4 grid md:grid-cols-5 gap-8 pt-8">
+            <div className="col-span-4 ">
+              <p>Project</p>
+              <h2>Overview</h2>
+              <p className='pt-4'>{reqProject.description}</p>
+              <a href={reqProject.demo} target="_blank" rel="noreferrer"><button className='px-8 py-2 mt-4 mr-8'>Demo</button></a>
+              <a href={reqProject.code} target="_blank" rel="noreferrer"><button className='px-8 py-2 mt-4'>Code</button></a>
+            </div>
+            <div className='col-span-4 md:col-span-1 shadow-lg shadow-gray-600 rounded-xl p-4'>
+              <div className="p-2">
+                <p className='text-center font-bold pb-2'>Technologies</p>
+                <div className='grid grid-cols-2 md:grid-cols-1'>
+
+                  {reqProject.techUsed.map((tech, i) => (
+                    <p key={`tech${i}`} className='text-white opacity-60 py-2 flex items-center overflow-auto'>
+                      <RiRadioButtonFill className='pr-1' /> {tech}
+                    </p>
+                  ))}
+
+                </div>
+              </div>
+            </div>
+            <Link href="/#Projects">
+              <button className='hidden md:block text-white py-2 px-4 bg-gradient-to-r from-gray-700 to-gray-900'>Back</button>
+            </Link>
+          </div>
         </div>
-      </div>)}
+      )
+      }
     </>
   )
 }
